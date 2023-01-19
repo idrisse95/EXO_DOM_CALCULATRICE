@@ -267,37 +267,45 @@ opeMulti.addEventListener('click', () => {
 
 
 
+let inputFocus;
+
+case7.addEventListener("focus", () => {
+        inputFocus = case7;
+    });
+
+
+
 
 
 let divExo4 = document.querySelectorAll('#numbersExo4 button')
 let buttChiff = divExo4.textContent
+
 divExo4.forEach(element => {
-
-    case7.addEventListener('focus', () => {
         element.addEventListener('click', () => {
-
-            case7.value += element.textContent.trim()
-
-            console.log((element.textContent));
-            console.log(case7);
+            if (inputFocus) {
+                inputFocus.value+= element.textContent.trim()
+            }
+            // case7.value += element.textContent.trim()
 
         })
+        case8.addEventListener('focus', () => {
+            inputFocus = case8;
     })
 
 
-});
-divExo4.forEach(element => {
 
-    case8.addEventListener('focus', () => {
-        element.addEventListener('click', () => {
+// divExo4.forEach(element => {
 
-            case8.value += element.textContent.trim()
+//     case8.addEventListener('focus', () => {
+//         element.addEventListener('click', () => {
 
-            console.log((element.textContent));
-            console.log(case8);
+//             case8.value += element.textContent.trim()
 
-        })
-    })
+//             console.log((element.textContent));
+//             console.log(case8);
+
+//         })
+//     })
 })
 
 
