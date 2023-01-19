@@ -57,6 +57,68 @@ egale2.addEventListener('click', () =>{
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let case5 = document.querySelector('#operatorsExo3 input')
 console.log(case5);
 let case6 = document.querySelectorAll('#operatorsExo3 input')[1]
@@ -88,6 +150,9 @@ buttonMulti.addEventListener('click',()=>{
     span.setAttribute('class','fas fa-times')
 })
 
+
+
+
 equals3.addEventListener('click',()=>{
 
     switch (span.className) {
@@ -109,3 +174,164 @@ equals3.addEventListener('click',()=>{
             break;
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let case7 = document.querySelectorAll('#exo-4 input')[0]
+let case8 = document.querySelectorAll('#exo-4 input')[1]
+let buttEquals = document.querySelector('#exo-4 button')
+
+
+
+
+
+let rep4 = document.querySelector('#response4')
+console.log(case7,case8,rep4);
+
+
+let opePlus = document.querySelector('#operatorsExo4 i')
+let opeMinus = document.querySelectorAll('#operatorsExo4 i')[1]
+let opeMulti = document.querySelectorAll('#operatorsExo4 i')[2]
+let opeDiv= document.querySelectorAll('#operatorsExo4 i')[3]
+console.log(opePlus,opeMinus,opeDiv,case7,case8);
+
+let span2 = document.querySelector('#exo-4 span i')
+console.log(span2);
+
+
+ 
+ 
+opePlus.addEventListener('click',()=>{
+    span2.setAttribute('class','fas fa-plus')
+})
+
+opeMinus.addEventListener('click',()=>{
+    span2.setAttribute('class','fas fa-minus')
+})
+
+opeDiv.addEventListener('click',()=>{
+    span2.setAttribute('class','fas fa-divide')
+})
+
+opeMulti.addEventListener('click',()=>{
+    span2.setAttribute('class','fas fa-times')
+})
+
+
+
+ 
+
+
+let divExo4 = document.querySelectorAll('#numbersExo4 button')
+let buttChiff = divExo4.textContent
+divExo4.forEach(element => {
+     
+    case7.addEventListener('focus',()=>{
+   element.addEventListener('click',()=>{
+
+        case7.value+= element.textContent.trim()
+         
+        console.log((element.textContent));
+        console.log(case7);
+
+   })})
+
+ 
+    
+    case8.addEventListener('focus',()=>{
+        element.addEventListener('click',()=>{
+     
+             case8.value+=element.textContent.trim()
+            
+             console.log((element.textContent));
+             console.log(case8);
+     
+        })})
+   
+});
+
+ 
+
+
+buttEquals.addEventListener('click',()=>{
+    console.log('button cliquer');
+    console.log(rep4);
+        switch (span2.className) {
+            case "fas fa-plus":
+                rep4.textContent=parseInt(case7.value)+parseInt(case8.value)
+            console.log("plis");
+                
+                break;
+
+                case "fas fa-minus":
+                    rep4.innerHTML= parseInt(case7.value)-parseInt(case8.value)
+                    console.log('moin');
+                    
+                    break;
+
+                    case "fas fa-times":
+                        rep4.innerHTML= parseInt(case7.value)*parseInt(case8.value)
+                        console.log('moin');
+                        
+                        break;
+
+
+                        case "fas fa-divide":
+                    rep4.innerHTML= parseInt(case7.value)/parseInt(case8.value)
+                    console.log('moin');
+                    
+                    break;
+        
+            default:
+                break;
+        }
+        
+    });
+ 
