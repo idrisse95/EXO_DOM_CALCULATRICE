@@ -1,6 +1,6 @@
-let case1 = document.querySelector('#sum1 input')
+let case1 = document.querySelector('.box-body input')
 console.log(case1);
-let case2 = document.querySelectorAll('#sum1 input')[1]
+let case2 = document.querySelectorAll('.box-body input')[1]
 console.log(case2);
 
 let egale1 = document.querySelector('button')
@@ -17,13 +17,50 @@ egale1.addEventListener('click', () => {
 })
 
 
-let case3 = document.getElementById('case3')
-let case4 = document.getElementById('case4')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let case3 = document.getElementsByTagName('input')[2]
+let case4 = document.getElementsByTagName('input')[3]
 console.log(case3, case4);
 let select = document.querySelector('select')
 console.log(select);
 let rep2 = document.getElementById('response2')
-let egale2 = document.getElementById('egale2')
+let egale2 = document.querySelector('#exo-2 button')
+console.log(egale2);
 
 
 egale2.addEventListener('click', () => {
